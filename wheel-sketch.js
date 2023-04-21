@@ -46,19 +46,24 @@ function setup() {
   
   startWheel = createButton('CLICK TO START');
   startWheel.mouseClicked(() => pressed1 = true);
-  startWheel.position(10, 310);
+  // startWheel.position(10, 310);
+  startWheel.size(120, 60);
   
   stop = createButton('STOP / SPIN AGAIN');
   stop.mouseClicked(() => pressed2 = true);
-  stop.position(10, 340);
+  // stop.position(10, 340);
+  stop.size(120, 60);
+
+  setChoices = createButton('Shuffle Choices');
+  setChoices.mousePressed(shuffleChoices);
+  // setChoices.position(10, 370);
+  setChoices.size(120, 60);
   
   // spin = createButton('SPIN');
   // spin.mouseClicked(() => pressed3 = true);
   // spin.position(70, 340);
   
-  setChoices = createButton('Shuffle Choices');
-  setChoices.mousePressed(shuffleChoices);
-  setChoices.position(10, 370);
+
      
   c1 = random(choices);
   c2 = random(choices);
